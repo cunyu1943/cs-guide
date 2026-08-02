@@ -1,154 +1,133 @@
-# VitePress 个人站点模板
+# 计算机学习指南
 
-基于 [VitePress](https://vitepress.dev/) 构建的个人站点模板，集成了丰富的社区插件与自定义主题样式，开箱即用。
+> 一份系统化的计算机基础学习指南，涵盖数据结构与算法、组成原理、计算机网络、操作系统四大核心模块，致力于帮助读者构建扎实的计算机知识体系。
 
-## 功能特性
+## 一、项目简介
 
-- **全文搜索** — 基于 [pagefind](https://pagefind.app/) 的离线全文搜索
-- **RSS 订阅** — 通过 `vitepress-plugin-rss` 自动生成 RSS
-- **Git 变更日志** — 基于 `@nolebase/vitepress-plugin-git-changelog` 自动记录页面修改历史
-- **公告弹窗** — 自定义公告组件，支持文本、图片、按钮，5 秒自动关闭
-- **打赏功能** — 集成 `vitepress-plugin-sponsor`，支持支付宝/微信二维码
-- **站点统计** — 基于 [不蒜子](https://busuanzi.pure.js.org/) 的访问量与访客数统计
-- **文章元信息** — 自动显示更新日期、字数统计、预估阅读时长
-- **代码组图标** — `vitepress-plugin-group-icons` 为代码块添加语言图标
-- **自定义样式** — 引用块、代码块、侧边栏图标、模糊隐藏、标记高亮等多套自定义样式
-- **霞鹜文楷字体** — 全站使用 LXGW WenKai GB Screen R 字体
-- **Hero 下划线动画** — 首页标题带 SVG 下划线装饰
-- **暗色主题** — 默认启用深色模式
-- **GitHub Pages 自动部署** — 配置了 GitHub Actions 工作流，推送到 `main` 分支自动构建部署
+「计算机学习指南」是一份面向计算机初学者与进阶学习者的开源学习资料，内容涵盖计算机科学的核心基础模块。本指南通过系统化的知识梳理与通俗易懂的讲解，帮助读者从零开始掌握计算机基础知识，构建完整的知识体系。
 
-## 项目结构
+无论是应对校招面试、考研复习，还是日常工作中的知识巩固，都可以在这里找到你需要的内容。
 
-```
-.
-├── .github/
-│   └── workflows/
-│       └── auto-deploy.yml       # GitHub Actions 自动部署
-├── docs/
-│   ├── .vitepress/
-│   │   ├── configs/
-│   │   │   ├── nav.ts            # 导航栏配置
-│   │   │   └── sidebar.ts        # 侧边栏配置
-│   │   ├── theme/
-│   │   │   ├── components/
-│   │   │   │   ├── ArticleMetadata.vue  # 文章元信息（字数/阅读时长）
-│   │   │   │   ├── DataPanel.vue        # 站点访问量统计面板
-│   │   │   │   ├── HomeUnderline.vue    # 首页标题下划线装饰
-│   │   │   │   └── notice.vue           # 公告弹窗组件
-│   │   │   ├── style/
-│   │   │   │   ├── var.css              # CSS 变量与字体
-│   │   │   │   ├── index.css            # 样式入口
-│   │   │   │   ├── blockquote.css       # 引用块样式
-│   │   │   │   ├── blur.css             # 模糊隐藏样式
-│   │   │   │   ├── hidden.css           # 隐藏样式
-│   │   │   │   ├── marker.css           # 标记高亮样式
-│   │   │   │   ├── sidebarIcon.css      # 侧边栏图标样式
-│   │   │   │   ├── vp-code.css          # 代码块样式
-│   │   │   │   ├── vp-code-group.css    # 代码组样式
-│   │   │   │   └── vp-code-title.css    # 代码标题样式
-│   │   │   ├── untils/
-│   │   │   │   └── functions.ts         # 工具函数（字数统计）
-│   │   │   └── index.ts                 # 主题入口
-│   │   └── config.mts                   # VitePress 站点配置
-│   └── src/
-│       ├── public/
-│       │   ├── imgs/                    # 图片资源
-│       │   └── svg/                     # SVG 图标
-│       ├── index.md                     # 首页
-│       ├── api-examples.md             # API 示例页
-│       └── markdown-examples.md        # Markdown 扩展示例页
-├── package.json
-├── pnpm-lock.yaml
-└── LICENSE                             # CC BY 4.0
-```
+## 二、内容模块
 
-## 快速开始
+### 2.1 数据结构与算法
 
-### 环境要求
+数据结构与算法是程序设计的基石，也是面试中的高频考点。本模块从基础概念入手，逐步深入到常用数据结构与经典算法的原理和实现。
 
-- Node.js >= 20
-- pnpm（推荐）
+- 数据结构简介
+- 数组详解
+- 数组的增删改查
+- 有序数组去重
+- 算法简介
+- 时间 & 空间复杂度
+- 链表解惑
+- 二叉树的遍历
 
-### 安装依赖
+### 2.2 组成原理
+
+计算机组成原理是理解计算机底层工作原理的关键，本模块将系统讲解计算机硬件系统的组成与工作机制。
+
+> 🚧 内容筹备中，敬请期待。
+
+### 2.3 计算机网络
+
+计算机网络是现代互联网的基础，本模块将从体系结构出发，深入讲解各层协议的原理与应用。
+
+> 🚧 内容筹备中，敬请期待。
+
+### 2.4 操作系统
+
+操作系统是计算机系统的核心，本模块将覆盖进程管理、内存管理、文件系统、I/O 管理等核心知识。
+
+> 🚧 内容筹备中，敬请期待。
+
+## 三、在线阅读
+
+本项目已通过 GitHub Actions 自动部署至 GitHub Pages，支持在线阅读：
+
+- 在线地址：[计算机学习指南](https://cunyu1943.github.io/cs-guide)
+
+## 四、本地运行
+
+本项目基于 [Node.js](https://nodejs.org/) 与 [pnpm](https://pnpm.io/) 进行管理，运行前请确保本地已安装对应环境。
+
+### 4.1 环境要求
+
+- Node.js >= 18
+- pnpm >= 8
+
+### 4.2 快速启动
 
 ```bash
+# 克隆项目
+git clone https://github.com/cunyu1943/cs-guide.git
+
+# 进入项目目录
+cd cs-guide
+
+# 安装依赖
 pnpm install
-```
 
-### 本地开发
-
-```bash
+# 启动本地开发服务器
 pnpm docs:dev
 ```
 
-### 构建生产
+启动成功后，在浏览器中访问 `http://localhost:5173` 即可阅读。
+
+### 4.3 构建部署
 
 ```bash
+# 构建生产版本
 pnpm docs:build
-```
 
-### 预览构建结果
-
-```bash
+# 本地预览构建产物
 pnpm docs:preview
 ```
 
-## 自定义配置
+## 五、项目结构
 
-### 站点信息
-
-编辑 [docs/.vitepress/config.mts](docs/.vitepress/config.mts) 修改站点标题、描述、语言等基础配置：
-
-```ts
-export default defineConfig({
-  title: "你的站点名",
-  description: "你的站点描述",
-  lang: 'zh-CN',
-  // ...
-})
+```text
+cs-guide/
+├── docs/                      # 文档源码目录
+│   ├── .vitepress/            # VitePress 配置目录
+│   │   ├── configs/           # 导航与侧边栏配置
+│   │   ├── theme/             # 主题与组件
+│   │   └── config.mts         # VitePress 主配置
+│   ├── src/                   # 文档内容
+│   │   ├── algo/              # 数据结构与算法
+│   │   ├── architecture/      # 组成原理
+│   │   ├── network/           # 计算机网络
+│   │   ├── system/            # 操作系统
+│   │   ├── guide.md           # 学习指引
+│   │   └── index.md           # 首页配置
+│   └── public/                # 静态资源
+├── .github/                   # GitHub 工作流配置
+├── package.json               # 项目依赖与脚本
+└── README.md                  # 项目说明文档
 ```
 
-### 导航栏与侧边栏
+## 六、参与贡献
 
-- 导航栏：编辑 [docs/.vitepress/configs/nav.ts](docs/.vitepress/configs/nav.ts)
-- 侧边栏：编辑 [docs/.vitepress/configs/sidebar.ts](docs/.vitepress/configs/sidebar.ts)
+欢迎对内容进行补充和修正！你可以通过以下方式参与贡献：
 
-### 公告弹窗
+1. Fork 本仓库
+2. 创建新分支：`git checkout -b feature/your-feature`
+3. 提交修改：`git commit -m 'feat: add some feature'`
+4. 推送分支：`git push origin feature/your-feature`
+5. 提交 Pull Request
 
-编辑 [docs/.vitepress/theme/components/notice.vue](docs/.vitepress/theme/components/notice.vue) 修改公告内容，或在 [config.mts](docs/.vitepress/config.mts) 中通过 `AnnouncementPlugin` 配置。
+在提交前，请确保内容准确、排版规范，并尽量遵循现有文档风格。
 
-### 打赏二维码
+## 七、关注交流
 
-替换以下图片文件：
+如果你想获取更多计算机学习资源、技术分享与好物推荐，可以关注以下项目：
 
-- `docs/src/public/imgs/award/alipay.jpg` — 支付宝收款码
-- `docs/src/public/imgs/award/wechatpay.jpg` — 微信收款码
+- [村雨遥の博客](https://github.com/cunyu1943/blog)：每日更新，分享每日见闻 & 免费资源。
+- [JavaPark](https://github.com/cunyu1943/JavaPark)：Java 学习保姆级教程、计算机基础、数据库、实战实践。
+- [好物周刊](https://github.com/cunyu1943/weekly)：每周五发布，记录每周看到的有价值的信息。
+- [Python 学习指南](https://github.com/cunyu1943/python-tutorial)：从零开始掌握 Python 编程。
+- [MySQL 学习指南](https://github.com/cunyu1943/mysql-tutorial)：从基础概念到 SQL 实战的系统化学习路径。
 
-### 主题色与字体
+## 八、许可证
 
-编辑 [docs/.vitepress/theme/style/var.css](docs/.vitepress/theme/style/var.css) 修改 CSS 变量，包括品牌色、Hero 渐变色、字体等。
-
-## 部署
-
-项目已配置 GitHub Actions 自动部署工作流（[.github/workflows/auto-deploy.yml](.github/workflows/auto-deploy.yml)），推送到 `main` 分支即可自动构建并部署到 GitHub Pages。
-
-如需手动部署，请参考 [VitePress 部署文档](https://vitepress.dev/guide/deploy)。
-
-## 技术栈
-
-| 技术 | 说明 |
-|------|------|
-| [VitePress](https://vitepress.dev/) | 静态站点生成器 |
-| [Vue 3](https://vuejs.org/) | 前端框架 |
-| [pagefind](https://pagefind.app/) | 离线全文搜索 |
-| [不蒜子](https://busuanzi.pure.js.org/) | 站点访问统计 |
-| [LXGW WenKai](https://github.com/lxgw/LxgwWenKai) | 霞鹜文楷字体 |
-
-## Star 趋势
-
-[![Star History Chart](https://api.star-history.com/svg?repos=cunyu1943/vitpress&type=Date)](https://star-history.com/#cunyu1943/vitpress&Date)
-
-## 许可证
-
-[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE)
+本项目基于 [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE) 协议开源，转载请注明出处。
