@@ -5,10 +5,11 @@ layout: home
 hero:
   name: "村雨遥"
   text: "计算机学习指南"
+  tagline: 一份面向计算机初学者与进阶学习者的开源学习资料，涵盖计算机科学的核心基础模块。
   image:
     # src: contact/contact.png # 
     src: imgs/site/logo.png
-  tagline: My great project tagline
+  
   actions:
     - theme: brand
       text: 开始学习
